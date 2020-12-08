@@ -1,0 +1,51 @@
+<div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8"><h2>OrderList</h2></div>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Buyer</th>
+                            <th>Order_date</th>
+                            <th>Order_cost</th>
+                            <th>Payment</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each order}} 
+                        <tr value="{{Order_ID}}">
+                            <td>{{Buyer}}</td>
+                            <td>{{Order_date}}</td>
+                            <td>{{Order_cost}}</td>
+                            <td>{{Payment}}</td>
+                            <td>                                    
+                                <a class="edit" title="Edit" data-toggle="tooltip" href="/orderlist/{{Order_ID}}"><i class="material-icons">&#xE254;</i></a>
+                                <button onclick="deleteOrder({{Order_ID}})">Delete</button>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                
+            
+            <form id="addorder" action="/orderlist" method="post">
+            <select name="Buyer_ID"> 
+                <option value="0" selected="selected">Select Buyer</option>
+                {{#each user}}
+                    <option value="{{User_ID}}">{{User_name}}</option>
+                {{/each}}
+            </select>
+            <input type = "text" name = "Order_cost" placeholder="Order_cost"> 
+            <input type = "text" name = "Order_date" placeholder="Order_date"> 
+            <input type = "text" name = "Payment" placeholder="Payment"> 
+
+            
+            <input type = "submit" value = "add new">
+
+            </form>
+            </div>
+</div>

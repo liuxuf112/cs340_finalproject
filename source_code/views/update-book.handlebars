@@ -1,0 +1,9 @@
+<h1>Update Book {{book.Book_name}}:</h1>
+<form id="update-book" action="/booklist" method="post">
+    Category: <input type="text" name="Category" value="{{book.Category}}"><br>
+    Book_name: <input type="text" name="Book_name" value="{{book.Book_name}}"><br>
+    Owner_ID: <input type="number" name="Owner_ID" value="{{book.Owner_ID}}"><br>
+    Prize: <input type="number" name="Prize" value="{{book.Prize}}"><br>
+    On_Sell: <input type="number" name="On_Sell" value="{{book.On_Sell}}"><br>
+</form>
+<button onclick="updateBook({{book.Book_ID}})">Update</button>

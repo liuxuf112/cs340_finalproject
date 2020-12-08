@@ -1,0 +1,8 @@
+<h1>Update User {{user.User_name}}:</h1>
+<form id="update-user" action="/userlist" method="post">
+    User_name: <input type="text" name="User_name" value="{{user.User_name}}"><br>
+    User_email: <input type="text" name="User_email" value="{{user.User_email}}"><br>
+    Address: <input type="text" name="Address" value="{{user.Address}}"><br>
+    Password: <input type="text" name="Password" value="{{user.Password}}"><br>
+</form>
+<button onclick="updateUser({{user.User_ID}})">Update</button>

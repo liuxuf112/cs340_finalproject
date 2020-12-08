@@ -1,0 +1,47 @@
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-8"><h2>UserList</h2></div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>User_name</th>
+                    <th>Password</th>
+                    <th>User_email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each user}} 
+                <tr value = "{{User_ID}}">
+                    <td>{{User_name}}</td>
+                    <td>{{Password}}</td>
+                    <td>{{User_email}}</td>
+                    <td>{{Address}}</td>
+                    <td>
+                        <a class="edit" title="Edit" data-toggle="tooltip" href="/userlist/{{User_ID}}"><i class="material-icons">&#xE254;</i></a>
+                        <button onclick="deleteUser({{User_ID}})">Delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        
+            <form id="adduser" action="/userlist" method="post">
+        
+            <input type = "text" name = "User_name" placeholder="User_name"> 
+            <input type = "text" name = "User_email" placeholder="User_email"> 
+            <input type = "text" name = "Address" placeholder="Address"> 
+            <input type = "text" name = "Password" placeholder="Password"> 
+
+            <input type = "submit" value = "add new">
+
+
+
+            </form>
+    </div>
+</div>

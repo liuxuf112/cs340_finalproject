@@ -1,0 +1,544 @@
+.header {
+    background-color: #DEB887;
+    color: #ffffff;
+    height: 70px;
+    width:100%;
+    position: relative;
+}
+
+.header-logo{
+    font-size: 30px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.header a{
+    text-decoration: none;
+    color:black
+}
+
+.signin{
+    position: absolute;
+    right: 95px;
+    top:23px;
+    font-size: 20px;
+}
+
+.signup{
+    position:absolute;
+    right:10px;
+    top:23px;
+    font-size: 20px;
+}
+
+.shopcart{
+    position:absolute;
+    right:170px;
+    top:23px;
+    font-size: 20px; 
+}
+
+.shopcart:hover{
+    cursor:pointer;
+
+}
+.signin:hover{
+    cursor: pointer;
+}
+
+.signup:hover{
+    cursor: pointer;
+}
+
+body {
+    line-height: 1.9;
+    font-family: var(--font-default);
+    position: relative;
+    
+}
+select{
+
+font-family: Avenir
+
+}
+
+a:hover{
+    color: gray;
+}
+
+#container {
+    height: 100%; /* 100% Full-height */
+    width: 25%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top:80px;
+    left:10px;
+}
+
+#sideMenu {
+    width: 260px;
+    /* height: 400px; */
+    /* background-color: green; */
+    background-color: inherit;
+    position:relative;
+}
+
+
+#sideMenu a {
+    display: block;
+    background-color: inherit;
+    font-size: 13px;
+    border-bottom: 1px solid white;
+    margin: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    line-height: 1.3;
+    color: inherit;
+    text-decoration: none;
+}
+
+#sideMenu a:hover{
+  background-color: #DEB887;
+}
+
+#sideMenu h2, #search-bar h2 {
+    background-color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-weight: bold;
+}
+
+#sideMenu.left a{
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /*color: gray;*/
+    font-family: default;
+    background-color: rgb(240, 238, 238);
+}
+
+#main_page_content {
+    width: 75%;
+    position: relative;
+    top: 10px;
+    left:350px;
+    background-color: inherit;
+}
+
+/*
+#booklist{
+    padding: 30px 30px
+}
+
+.book{
+    width:200px;
+    height:250px;
+    margin: 30px 35px;
+    float: left;
+}
+
+.bookimg img{
+    width:145px;
+    height: 200px;
+}
+
+.bookintro{
+    text-align: left;
+}
+
+
+
+
+#catgorylist{
+    padding: 5px 5px;
+}
+
+.catgory{
+    width:250px;
+    height:250px;
+    margin: 30px 35px;
+    float: left;
+}
+
+.catgoryimg img{
+    width:250px;
+    height: 250px;
+}
+
+.catgoryintro{
+    text-align: center;
+}
+*/
+
+#search-bar input {
+    display: block;
+    background-color: white;
+    font-size: 12px;
+    margin: 0 10px;
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    line-height: 1.3;
+    color: inherit;
+    text-decoration: none;
+    float: left;
+}
+
+
+#search-bar #keyword-submit{
+    background-color: lightgrey;
+    margin: 0;
+}
+
+#search-bar #keyword-submit:hover{
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#search-bar{
+    width: 260px;
+    /* height: 400px; */
+    /* background-color: green; */
+    background-color: inherit;
+    position: relative;
+}
+
+#supporting-info{
+    position: relative;
+    top: 20px;
+}
+
+#search-criterion{
+    display: block;
+    font-size: 15px;
+    margin: 0 10px;
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    line-height: 1.3;
+    color: inherit;
+    text-decoration: none;
+    float: left;
+}
+
+
+
+.div_container_top{
+    width:100%;
+    width:310px;
+    height:150px;
+    margin:0 auto;
+}
+
+.top_logo{
+    width:53px;
+    height:53px;
+    margin:0 auto;
+}
+
+.top_word{
+    width:310;
+    margin:0 auto;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    text-align:center;
+}
+
+.div_container_center{
+    width:100%;
+    width:310px;
+    height:235px;
+    margin:0 auto;
+    background-color:#FFF;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.input_section_1{
+    width:100%;
+    height:40px;
+}
+
+.input_section_2{
+    width:100%;
+    height:20px;
+    margin-top:10px;
+}
+
+.body label{
+    font-size: 16px;
+    font-weight:600;
+    float:left;
+    }	
+
+.signin_button{
+    display: flex;
+    justify-content: space-around;
+}
+
+.signin_button input{
+    margin-top:8px;
+    padding:8px 12px;
+    font-size:14px;
+    font-weight:600;
+    line-height:20px;
+    border:1px solid rgba(27,31,35,0.2);
+    width:248px;
+    color:white;
+    background-color:#DEB887;
+    border-radius: 0.25em;
+    text-align:center;
+}
+
+
+
+.div_bottom{
+    width:100%;
+    width:310px;
+    height:50px;
+    margin:0 auto;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bottom_1{
+    text-align:center;
+    padding:8px 12px;
+}
+.bottom_1 a{
+    text-decoration: none;
+    color:#0366d6;
+    font-size: 17px;
+}
+
+.bottom_1 a:hover{
+    cursor:pointer;
+    color: #8B008B;
+    font-size:20px;
+
+}
+
+
+.addcart_button{
+    display: flex;
+    
+    text-align: left;
+}
+
+.addcart_button input{
+    margin-top:8px;
+    padding:6px 10px;
+    font-size:14px;
+    font-weight:600;
+    line-height:20px;
+    border:1px solid rgba(27,31,35,0.2);
+    width:110px;
+    color:white;
+    background-color:#DEB887;
+    border-radius: 0.25em;
+    text-align:left;
+}
+
+.addcart_button input:hover{
+    background-color:#d68666 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table-wrapper {
+    width: 95%;
+    margin: 30px auto;
+    background-color: rgb(240, 238, 238);
+    box-shadow: 0 1px 1px rgba(0,0,0,1);
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+.table-title .add-new {
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+.table-title .add-new i {
+    margin-right: 4px;
+}
+table.table {
+    /*table-layout: fixed;  */
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:last-child {
+    width: 100px;
+}
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}    
+table.table td a.add {
+    color: #27C46B;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}    
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+table.table .form-control.error {
+    border-color: #f50000;
+}
+table.table td .add {
+    display: none;
+}
+
+
+form {
+  font-family: Avenir;
+  
+}
+
+
+
+input{
+  font-family: Avenir;
+  border-radius: 0;
+  transition: all .15s ease
+
+}
+
+
+table{
+  font-family: Avenir
+  
+}
+
+
+input[type=text] {
+ background-color: rgb(230, 230, 230);
+ border: none;
+}
+
+input[type=text]:focus {
+  background-color: #ADDFFF;
+}
+
+select {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(230, 230, 230);
+}
+
+input[type=submit]{
+
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .75em;
+
+  height: 38px;
+  width: 90px;
+  line-height: 38px;
+  overflow: hidden;
+  background: #f48c3e;
+  border-radius: 3px;
+  box-shadow: 0 15px 30px rgba(black,.1);
+  border: 10px;
+  cursor: pointer;
+  transition: all .3s ease;
+
+}
+
+button{
+  display: block;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .75em;
+  
+  height: 38px;
+  width: 90px;
+  line-height: 38px;
+  overflow: hidden;
+  background: #FA8072;
+  border-radius: 3px;
+  box-shadow: 0 15px 30px rgba(black,.1);
+  border: 0;
+  cursor: pointer;
+  transition: all .3s ease;
+  padding: 5px
+}
+
+
+
+

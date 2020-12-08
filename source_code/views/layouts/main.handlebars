@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        {{#each jsscripts}}
+            <script src="/static/{{this}}"></script>
+        {{/each}}
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href = "/main_css.css" rel= "stylesheet"/>
+    </head>
+
+    <body>
+        <div class = "header">
+            <div class = "header-logo">
+                Awsome Book Market
+            </div>
+            
+
+        </div>
+    
+
+        <div id="container">
+            <div id="sideMenu" class="left">
+                  <h2>Menu</h2>
+                  <a href = "/main_page" >Main Page</a>
+                  <a href = "/booklist" >BookList</a>
+                  <a href = "/authorlist" >AuthorList</a>
+                  <a href = "/userlist" >UserList</a>
+                  <a href = "/orderlist" >OrderList</a>
+                  <a href = "/cart" >Cart</a>
+                  <a href = "/book_author" >Book_Author</a>
+                  <a href = "/user_order_book" >User_Order_Book</a>
+                  <a href = "/support" >Supporting</a>
+            </div>
+        </div>
+
+
+        <div id = "main_page_content">
+            {{{body}}}
+        </div>
+    </body>
+
+</html>

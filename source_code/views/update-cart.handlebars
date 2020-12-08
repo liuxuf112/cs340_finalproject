@@ -1,0 +1,8 @@
+<h1>Update Cart {{cart.User_ID}}:</h1>
+<form id="update-cart" action="/cart" method="post">
+
+    User_ID: <input type="number" name="User_ID" value="{{cart.User_ID}}"><br>
+    Book_ID: <input type="number" name="Book_ID" value="{{cart.Book_ID}}"><br>
+
+</form>
+<button onclick="updateBook({{book.Book_ID}})">Update</button>

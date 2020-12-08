@@ -1,0 +1,48 @@
+<div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-8"><h2>Cart</h2></div>
+                        </div>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Book</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each cart}}
+                            <tr>
+                                <td>{{User}}</td>
+                                <td>{{Book}}</td>
+                                <td>
+                                    
+                                    <button onclick="deleteCart({{User_ID}}, {{Book_ID}})">Delete</button>
+                                </td>
+                            </tr>   
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    
+                    
+            <form id="addcart" action="/cart" method="post">
+            <select name="User_ID"> 
+                <option value="0" selected="selected">Select User</option>
+                {{#each user}}
+                    <option value="{{User_ID}}">{{User_name}}</option>
+                {{/each}}
+            </select>
+            <select name="Book_ID"> 
+                <option value="0" selected="selected">Select Book</option>
+                {{#each book}}
+                    <option value="{{Book_ID}}">{{Book_name}}</option>
+                {{/each}}
+            </select>
+            <input type = "submit" value = "add new">
+
+            </form>
+        </div>
+</div>

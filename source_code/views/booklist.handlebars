@@ -1,0 +1,76 @@
+<div id="search-bar">
+    <h2>Search</h2>
+    <div id="search-criterion">
+        <label for="search-options">Search By:</label>
+        <select name="search-options" id="search-by">
+        <option value="author">Author</option>
+        <option value="name">Book Name</option>
+        <option value="category">Category</option>
+        </select>
+    </div>
+    
+    <input id="search-bar-input" placeholder="Enter your keywords...">
+    <input type="submit" id="keyword-submit" onclick="filter()">
+</div>
+
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-8"><h2>BookList</h2></div>
+
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Book name</th>  
+                    <th>Category</th>
+                    <th>Owner</th>
+                    <th>Prize</th>
+                    <th>On Sell</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each book}} 
+                <tr value="{{Book_ID}}">
+                
+                    <td>{{Book_name}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Owner}}</td>
+                    <td>{{Prize}}</td>
+                    <td>{{On_Sell}}</td>
+                    <td>                                                  
+                        <a class="edit" title="Edit" data-toggle="tooltip" href="/booklist/{{Book_ID}}"><i class="material-icons">&#xE254;</i></a>
+                        
+                        <button onclick="deleteBook({{Book_ID}})">Delete</button>
+                    </td>                      
+                    
+                </tr> 
+                {{/each}} 
+                
+                
+            </tbody>
+            
+
+          
+        </table>
+        
+            <form id="addbook" action="/booklist" method="post">
+        
+            <input type = "text" name = "Book_name" placeholder="Book_name"> 
+            <input type = "text" name = "Category" placeholder="Category"> 
+            <select name="Owner_ID"> 
+                <option value="0" selected="selected">Select Owner</option>
+                {{#each user}}
+                    <option value="{{User_ID}}">{{User_name}}</option>
+                {{/each}}
+            </select>
+            <input type = "text" name = "Prize" placeholder="Prize"> 
+            <input type = "text" name = "On_Sell" placeholder="On_Sell">
+            <input type = "submit" value = "ADD NEW">
+
+            </form>
+    </div>
+</div>

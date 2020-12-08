@@ -1,0 +1,36 @@
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-8"><h2>Author List</h2></div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Author_name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each author}} 
+                <tr value="{{Author_ID}}">
+                    <td>{{Name}}</td>
+                    <td>                                                         
+                        <a class="edit" title="Edit" data-toggle="tooltip" href="/authorlist/{{Author_ID}}"><i class="material-icons">&#xE254;</i></a>
+                        <button onclick="deleteAuthor({{Author_ID}})">Delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        
+        
+            <form id="addauthor" action="/authorlist" method="post">
+        
+            <input type = "text" name = "Name" placeholder="Author Name"> 
+            <input type = "submit" value = "add new">
+
+            </form>
+    </div>
+</div>

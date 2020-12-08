@@ -1,0 +1,49 @@
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-8"><h2>Book_Author</h2></div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Author_ID</th>
+                    <th>Book_ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each book_author}}
+                <tr>
+                    <td>{{Author}}</td>
+                    <td>{{Book}}</td>
+                    <td>
+                        
+                        <button onclick="deleteBook_author({{Book_ID}}, {{Author_ID}})">Delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        
+            <form id="addbook" action="/book_author" method="post">
+            <select name="Book_ID"> 
+                <option value="0" selected="selected">Select Book</option>
+                {{#each book}}
+                    <option value="{{Book_ID}}">{{Book_name}}</option>
+                {{/each}}
+            </select>
+
+            <select name="Author_ID"> 
+                <option value="0" selected="selected">Select Author</option>
+                {{#each author}}
+                    <option value="{{Author_ID}}">{{Name}}</option>
+                {{/each}}
+            </select>
+
+            <input type = "submit" value = "add new">
+
+            </form>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Update Order:</h1>
+<form id="update-author" action="/orderlist" method="post">
+    Order_cost: <input type="text" name="Order_cost" value="{{order.Order_cost}}"><br>
+    Order_date: <input type="text" name="Order_date" value="{{order.Order_date}}"><br>
+    Buyer_ID: <input type="text" name="Buyer_ID" value="{{order.Buyer_ID}}"><br>
+    Payment: <input type="text" name="Payment" value="{{order.Payment}}"><br>
+</form>
+<button onclick="updateOrder({{order.Order_ID}})">Update</button>

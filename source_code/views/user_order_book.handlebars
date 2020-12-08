@@ -1,0 +1,53 @@
+<div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8"><h2>User_Order_Book</h2></div>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Order_ID</th>
+                            <th>Book</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each user_order_book}}
+                        <tr>
+                            <td>{{User}}</td>
+                            <td>{{Order_ID}}</td>
+                            <td>{{Book}}</td>
+                            <td>
+                                
+                                <button onclick="deleteU_O_B({{User_ID}}, {{Order_ID}}, {{Book_ID}})">Delete</button>
+                            </td>
+                        </tr>
+                        {{/each}}  
+                    </tbody>
+                </table>
+                
+            <form id="add_user_order_book" action="/user_order_book" method="post">
+            <select name="User_ID"> 
+                <option value="0" selected="selected">Select User</option>
+                {{#each user}}
+                    <option value="{{User_ID}}">{{User_name}}</option>
+                {{/each}}
+            </select>
+            
+            <input type = "text" name = "Order_ID" placeholder="Order_ID"> 
+
+            <select name="Book_ID"> 
+                <option value="0" selected="selected">Select Book</option>
+                {{#each book}}
+                    <option value="{{Book_ID}}">{{Book_name}}</option>
+                {{/each}}
+            </select>
+
+            <input type = "submit" value = "add new">
+
+            </form>
+            </div>
+</div>
